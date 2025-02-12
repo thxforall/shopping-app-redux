@@ -33,13 +33,10 @@ const todoSlice = createSlice({
         todo.completed = !todo.completed;
       }
     },
-    setType: (state, action) => {
-      state.type = action.payload;
-    }
   },
 });
 
-export const { addTodo, removeTodo, editTodo, toggleTodo, setType } = todoSlice.actions;
+export const { addTodo, removeTodo, editTodo, toggleTodo } = todoSlice.actions;
 
 export const selectActiveTodos = (state) => 
   state.todos.todos.filter(todo => !todo.completed);
